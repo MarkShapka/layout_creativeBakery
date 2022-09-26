@@ -1,0 +1,126 @@
+.block-image{
+  position: relative;
+}
+
+.header {
+  background-color: $clLPink;
+
+  &__text {
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: -0.01em;
+    margin-bottom: 32px;
+
+    @include bp(md){
+      text-align: left;
+      margin-bottom: 146px;
+    }
+
+    @include bp(lg){
+      margin-bottom: 8px;
+    }
+
+    @include bp(xl){
+      margin-bottom: 40px;
+    }
+
+  }
+
+  &__title {
+    font-size: 64px;
+    line-height: 85%;
+    letter-spacing: -0.05em;
+    text-transform: uppercase;
+    color: $clAOrange;
+    text-align: center;
+
+    @include bp(md){
+      font-size: 80px;
+      margin-bottom: 210px;
+      position: relative;
+      z-index: 2;
+    }
+
+    @include bp(lg){
+      font-size: 118px;
+      margin-bottom: 64px;
+    }
+
+    @include bp(xl){
+      font-size: 140px;
+    }
+  }
+
+  &__image {
+    display: block;
+    width: 288px;
+    height: 290px;
+    margin: 0 auto;
+
+    @include bp(md){
+      width: 326px;
+      height: 328px;
+      position: absolute;
+      top: -46%;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+    
+    @include bp(lg){
+      width: 544px;
+      height: 546px;
+      top: -130%;
+      left: 51%;
+    }
+
+    @include bp(xl){
+      width: 584px;
+      height: 586px;
+      top: -125%;
+    }
+  }
+
+  &__link {
+    display: block;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    border: 2px solid $clAOrange;
+    border-radius: 32px;
+    padding: 16px 77px;
+    color: $clAOrange;
+    margin-bottom: 104px;
+    text-align: center;
+    width: 100%;
+
+    &:disabled{
+      border: 2px solid $clLOrange;
+      color: $clLOrange;
+      pointer-events: none;
+    }
+
+    &:hover{
+      background-color: $clAOrange;
+      color: $clWhite;
+    }
+
+    &:active{
+      background-color: $clDOrange;
+    }
+
+    @include bp(md){
+      width: 326px;
+      height: 56px;
+      margin: auto;
+      margin-bottom: 210px;
+    }
+
+    @include bp(lg){
+      width: 260px;
+      padding: 18px 61px;
+      margin: 0;
+      margin-bottom: 313px;
+    }
+  }
+}

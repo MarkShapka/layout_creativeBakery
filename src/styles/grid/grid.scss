@@ -1,0 +1,82 @@
+$container-max-width: 1200px !default;
+$grig-gap: 30px !default;
+$grid-gap-side: $grig-gap / 2;
+$grid-columns: 12 !default;
+$grid-breakpoints: (
+  mb: 0,
+  tb: 768px,
+  dt: 1140px
+) !default;
+
+body{
+  // background-color: $colorBg;
+  box-sizing: border-box;
+  // color: aliceblue;
+}
+
+.container{
+  // border: 3px solid red;
+  max-width: $container-max-width;
+  margin: 0 auto;
+  padding-left: $grid-gap-side;
+  padding-right: $grid-gap-side;
+}
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  // border: 3px solid blue;
+  margin-left: -$grid-gap-side;
+  margin-right: -$grid-gap-side;
+
+  > * {
+    margin-left: $grid-gap-side;
+    margin-right: $grid-gap-side;
+  }
+}
+
+@mixin col($size) {
+  flex: 1 0 auto;
+  width: calc(#{percentage($size / $grid-columns)} - #{$grig-gap});
+  // border: 4px solid violet;
+}
+
+// @for $i from 1 through $grid-columns {
+//   .col-#{$i} {
+//     @include col($i);
+//   }
+// }
+
+.col{
+  flex: 1 0 0%;
+  // border: 1px solid yellow;
+}
+
+// .block{
+//   background-color: gray;
+//   // border: 1px solid green;
+//   padding: 20px;
+// }
+
+@mixin media($width) {
+  @media(min-width: $width) {
+    @content;
+  }
+}
+
+@mixin bp($name) {
+  $width: map-get($grid-breakpoints, $name);
+  @include media($width) {
+    @content;
+  }
+}
+
+@each $bp, $width in $grid-breakpoints {
+  @include media($width) {
+    @for $i from 1 through $grid-columns {
+      .col-#{$bp}-#{$i} {
+        @include col($i);
+      }
+    }
+  }
+}

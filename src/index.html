@@ -3,11 +3,64 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
+    <title>BakerLab</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./iconsFont.css">
     <link rel="stylesheet" href="./styles/main.scss">
   </head>
   <body>
-    <h1>Hello Mate Academy</h1>
+    
+    <header class="header">
+      <nav class="header__nav nav">
+        <a href="#" class="nav__logo icon-logo"></a>
+        <div class="nav__menu icon-menu menu">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a href="#" class="menu__link">Products</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">About Us</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Blog</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link menu__link--red icon-phone">Contact us</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="container">
+        <div class="row">
+          <div class="col col--50 col--25">
+            <p class="header__text">
+              We bake your fantasies — croissants, cakes, cookies, and cupcakes.
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col block-image">
+            <h1 class="header__title">
+              Creative bakery
+            </h1>
+
+            <img src="./images/cookie.png" alt="image-main-page" class="header__image">
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col">
+            <button class="header__link"><span class="icon-cookies"></span>Learn more</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+
     <script type="text/javascript" src="scripts/main.js"></script>
   </body>
 </html>

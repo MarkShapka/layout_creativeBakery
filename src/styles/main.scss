@@ -2,6 +2,123 @@
 @import "fonts";
 @import "typography";
 
-body {
-  background: $c-gray;
+@import "./utils/myReset";
+// @import "./grid/grid.scss";
+
+
+
+$grid-breakpoints: (
+  sm: 0,
+  md: 768px,
+  lg: 1024px,
+  xl: 1200px
+);
+
+@mixin media($width) {
+  @media(min-width: $width) {
+    @content;
+  }
 }
+
+@mixin bp($name) {
+  $width: map-get($grid-breakpoints, $name);
+  @include media($width) {
+    @content;
+  }
+}
+
+@import "./blocks/menu";
+@import "./blocks/nav";
+@import "./blocks/header";
+
+
+body {
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: $clBlack;
+}
+
+.container{
+  // border: 2px solid red;
+  padding: 0 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @include bp(md){
+    padding: 0 44px;
+  }
+}
+
+.row{
+  // border: 1px solid green;
+  display: flex;
+  flex-direction: column;
+
+  @include bp(md){
+    flex-direction: row;
+  }
+}
+
+.col{
+  // border: 3px solid violet;
+  flex: 1 0 0%;
+
+  @include bp(md){
+    &--50{
+      flex: 0 0 50%;
+    }
+  }
+
+  @include bp(lg){
+    &--25{
+      flex: 0 0 25%;
+    }
+  }
+
+  
+}
+
+
+
+
+
+.icon{
+  &-logo{
+    font-size: 25px;
+    color: $clBlack;
+  }
+
+  &-menu{
+    font-size: 8px;
+
+    @include bp(lg){
+      &::before{
+        display: none;
+      }
+    }
+  }
+
+  &-cookies{
+    font-size: 20px;
+    margin-right: 6px;
+
+    &::before{
+      position: relative;
+      top: 10%;
+    }
+  }
+
+  &-phone{
+    &::before{
+      position: relative;
+      top: 10%;
+      margin-right: 7px;
+      margin-left: 3px;
+    }
+  }
+}
+
+
+
+
