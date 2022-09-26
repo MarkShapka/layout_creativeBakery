@@ -5,8 +5,6 @@
 @import "./utils/myReset";
 // @import "./grid/grid.scss";
 
-
-
 $grid-breakpoints: (
   sm: 0,
   md: 768px,
@@ -31,7 +29,6 @@ $grid-breakpoints: (
 @import "./blocks/nav";
 @import "./blocks/header";
 
-
 body {
   font-family: Inter, sans-serif;
   font-weight: 400;
@@ -39,39 +36,39 @@ body {
   color: $clBlack;
 }
 
-.container{
+.container {
   // border: 2px solid red;
   padding: 0 16px;
   max-width: 1200px;
   margin: 0 auto;
 
-  @include bp(md){
+  @include bp(md) {
     padding: 0 44px;
   }
 }
 
-.row{
+.row {
   // border: 1px solid green;
   display: flex;
   flex-direction: column;
 
-  @include bp(md){
+  @include bp(md) {
     flex-direction: row;
   }
 }
 
-.col{
+.col {
   // border: 3px solid violet;
   flex: 1 0 0%;
 
-  @include bp(md){
-    &--50{
+  @include bp(md) {
+    &--50 {
       flex: 0 0 50%;
     }
   }
 
-  @include bp(lg){
-    &--25{
+  @include bp(lg) {
+    &--25 {
       flex: 0 0 25%;
     }
   }
@@ -79,38 +76,34 @@ body {
   
 }
 
-
-
-
-
-.icon{
-  &-logo{
+.icon {
+  &-logo {
     font-size: 25px;
     color: $clBlack;
   }
 
-  &-menu{
+  &-menu {
     font-size: 8px;
 
-    @include bp(lg){
-      &::before{
+    @include bp(lg) {
+      &::before {
         display: none;
       }
     }
   }
 
-  &-cookies{
+  &-cookies {
     font-size: 20px;
     margin-right: 6px;
 
-    &::before{
+    &::before {
       position: relative;
       top: 10%;
     }
   }
 
-  &-phone{
-    &::before{
+  &-phone {
+    &::before {
       position: relative;
       top: 10%;
       margin-right: 7px;
@@ -118,7 +111,3 @@ body {
     }
   }
 }
-
-
-
-

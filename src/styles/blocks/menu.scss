@@ -3,7 +3,7 @@
   &__list {
     display: none;
 
-    @include bp(lg){
+    @include bp(lg) {
       display: flex;
       gap: 64px;
       
@@ -16,14 +16,14 @@
     letter-spacing: -0.01em;
     color: $clBlack;
 
-    &--red{
+    &--red {
       color: $clAOrange;
     }
 
-    &:hover{
+    &:hover {
       color: $clAOrange;
 
-      &::after{
+      &::after {
         display: block;
         content: "";
         height: 1px;
@@ -32,10 +32,10 @@
       }
     }
 
-    &:active{
+    &:active {
       color: $clDOrange;
 
-      &::after{
+      &::after {
         background-color: $clDOrange;
       }
     }

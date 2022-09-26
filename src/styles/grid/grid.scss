@@ -8,13 +8,13 @@ $grid-breakpoints: (
   dt: 1140px
 ) !default;
 
-body{
+body {
   // background-color: $colorBg;
   box-sizing: border-box;
   // color: aliceblue;
 }
 
-.container{
+.container {
   // border: 3px solid red;
   max-width: $container-max-width;
   margin: 0 auto;
@@ -22,7 +22,7 @@ body{
   padding-right: $grid-gap-side;
 }
 
-.row{
+.row {
   display: flex;
   flex-wrap: wrap;
   // border: 3px solid blue;
@@ -47,7 +47,7 @@ body{
 //   }
 // }
 
-.col{
+.col {
   flex: 1 0 0%;
   // border: 1px solid yellow;
 }
