@@ -28,6 +28,7 @@ $grid-breakpoints: (
 @import "./blocks/menu";
 @import "./blocks/nav";
 @import "./blocks/header";
+@import "./blocks/footer";
 
 body {
   font-family: Inter, sans-serif;
@@ -37,7 +38,7 @@ body {
 }
 
 .container {
-  // border: 2px solid red;
+  border: 2px solid red;
   padding: 0 16px;
   max-width: 1200px;
   margin: 0 auto;
@@ -54,6 +55,14 @@ body {
 
   @include bp(md) {
     flex-direction: row;
+  }
+
+  &--lg {
+    display: block;
+
+    @include bp(lg) {
+      display: flex;
+    }
   }
 }
 
@@ -72,14 +81,26 @@ body {
       flex: 0 0 25%;
     }
   }
-
-  
 }
 
 .icon {
   &-logo {
     font-size: 25px;
     color: $clBlack;
+
+    &--footer {
+      font-size: 30px;
+      color: $clWhite;
+      padding-top: 61px;
+
+      @include bp(md) {
+        padding-top: 93px;
+
+        &::before {
+          font-size: 30px;
+        }
+      }
+    }
   }
 
   &-menu {
@@ -108,6 +129,33 @@ body {
       top: 10%;
       margin-right: 7px;
       margin-left: 3px;
+    }
+  }
+
+  &-facebook {
+    font-size: 20px;
+    color: $clAOrange;
+
+    &:hover {
+      color: $clWhite;
+    }
+  }
+
+  &-instagram {
+    font-size: 20px;
+    color: $clAOrange;
+
+    &:hover {
+      color: $clWhite;
+    }
+  }
+
+  &-twitter {
+    font-size: 20px;
+    color: $clAOrange;
+
+    &:hover {
+      color: $clWhite;
     }
   }
 }
