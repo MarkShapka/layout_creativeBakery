@@ -1,0 +1,111 @@
+.about-us {
+  position: relative;
+
+  &__text {
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.01em;
+    color: $clBlack;
+    margin-bottom: 64px;
+
+    @include bp(md) {
+      margin-bottom: 72px;
+    }
+
+    @include bp(lg) {
+      margin-bottom: 146px;
+    }
+  }
+
+  &__image {
+    border: 1px solid #000;
+    width: 320px;
+    height: 300px;
+    position: absolute;
+    bottom: 246px;
+    left: 0;
+    z-index: -1;
+
+    @include bp(md) {
+      width: 526px;
+      height: 493px;
+      top: 51px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @include bp(lg) {
+      width: 718px;
+      height: 673px;
+      top: 0;
+      left: 315px;
+      transform: translateX(0);
+    }
+
+    @include bp(xl) {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__row {
+    @include bp(md) {
+      margin-bottom: 80px;
+    }
+
+    @include bp(lg) {
+      margin-bottom: 0;
+    }
+
+    &--last {
+      @include bp(md) {
+        margin-bottom: 152px;
+      }
+
+      @include bp(lg) {
+        margin-bottom: 0;
+      }
+    }
+
+    &--lg {
+      display: block;
+
+      @include bp(lg) {
+        display: flex;
+        margin-bottom: 349px;
+      }
+    }
+  }
+}
+
+.box {
+  margin-bottom: 48px;
+
+  @include bp(md) {
+    margin-bottom: 0;
+  }
+
+  &--last {
+    margin-bottom: 72px;
+
+    @include bp(md) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    font-size: 96px;
+    line-height: 85%;
+    letter-spacing: -0.05em;
+    text-transform: uppercase;
+    color: $clAOrange;
+    margin-bottom: 8px;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.01em;
+    color: $clBlack;
+  }
+}
